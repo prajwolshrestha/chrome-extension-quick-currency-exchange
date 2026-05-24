@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon-container">
+        <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 17H4M4 17l4 4M4 17l4-4M4 7h16M20 7l-4-4M20 7l-4 4"/>
+        </svg>
+      </div>
+      <span class="logo-title">Currency Convert</span>
+    </div>
+    <button id="refresh-btn" title="Refresh Rates">
+      <svg class="refresh-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="converter-box">
+    <div class="form-group">
+      <label for="convert-amount">Amount</label>
+      <div class="input-container">
+        <input type="number" id="convert-amount" value="1.00" min="0" step="any">
+        <select id="convert-from-select">
+          <!-- Populated from storage in popup.js -->
+        </select>
+      </div>
+    </div>
+
+    <div class="quick-convert-card">
+      <div id="quick-results">
+        <!-- Live conversions populating here -->
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Developed by <a href="https://prajwolshrestha.com.np/" target="_blank" id="footer-dev-link">Prajwol</a> using Google AI Studio.</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
